@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actionTypes/commonTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/commonActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/endpoints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/somecomp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GridItem/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constans/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +54,8 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -41,11 +72,41 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="295000" />
+      <workItem from="1605787248816" duration="3761000" />
     </task>
+    <task id="LOCAL-00001" summary="some changes">
+      <created>1605790376588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605790376588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1605790376324">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605790376324" />
+    <state x="239" y="88" key="SettingsEditor" timestamp="1605795904659">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605795904659" />
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605790386246">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605790386246" />
+    <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1605792565629">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1605792565629" />
   </component>
 </project>
