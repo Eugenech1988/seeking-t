@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="11309000" />
+      <workItem from="1605787248816" duration="12919000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1605790376588</created>
@@ -63,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605796152347</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tests added, sass added, ts started">
+      <created>1605868789095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605868789095</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,21 +76,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some changes" />
     <MESSAGE value="typescript rebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="typescript rebase" />
+    <MESSAGE value="tests added, sass added, ts started" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests added, sass added, ts started" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1605796152107">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1605868788869">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605796152107" />
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605868788869" />
     <state x="239" y="88" key="SettingsEditor" timestamp="1605795904659">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605795904659" />
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605796369447">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605868790416">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605796369447" />
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605868790416" />
     <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1605798920555">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

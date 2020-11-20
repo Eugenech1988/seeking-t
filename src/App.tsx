@@ -15,13 +15,31 @@ const generateEmptyGrid = () => {
 
 const App: React.FC = () => {
   const [grid, setGrid] = useState(generateEmptyGrid());
+  const [started, setStarted] = useState(false)
   // console.log(grid);
+
+  const onGridCellClick = () => {
+    console.log('clicked');
+  }
+
   return (
     <div className="app">
+      <div className="buttons-wrapper">
+        <button
+          className='start-button'
+        />
+        <button
+          className='clear-button'
+        />
+        <button
+          className='random-button'
+        />
+      </div>
       <div className="grid">
         {grid.map((rows, i) =>
           rows.map((col, j) =>
             <div
+              onClick={onGridCellClick}
               className='grid-cell'
               key={`${i}${j}`}
             />
