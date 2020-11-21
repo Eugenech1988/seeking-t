@@ -1,6 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(50, 20px);
+  justify-content: center;
 }
 .grid-cell {
   border: 1px solid black;
@@ -9,5 +10,25 @@
   cursor: pointer;
   &.active {
     background-color: #211717;
+  }
+}
+.buttons-wrapper {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.btn {
+  line-height: 30px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 0 15px;
+  border: 1px solid #211717;
+  margin-right: 10px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:last-child {
+    margin-right: 0;
   }
 }

@@ -19,28 +19,39 @@ const App: React.FC = () => {
   const [started, setStarted] = useState(false)
   // console.log(grid);
 
-  const onGridCellClick = (i: number, j: number) => () => {
+  const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
     const deepGrid: number[][] = cloneDeep(grid)
-    deepGrid[i][j] = grid[i][j] ? 0 : 1;
+    deepGrid[rowIndex][colIndex] = grid[rowIndex][colIndex] ? 0 : 1;
     setGrid(deepGrid)
+  }
+
+  const onClearClick = () => {
+    setGrid(generateEmptyGrid())
   }
 
   return (
     <div className="app">
       <div className="buttons-wrapper">
         <button
-          className='start-button'
-        />
+          className='btn start-button'
+        >
+          Start
+        </button>
         <button
-          className='clear-button'
-        />
+          className='btn clear-button'
+          onClick={onClearClick}
+        >
+          Clear
+        </button>
         <button
-          className='random-button'
-        />
+          className='btn random-button'
+        >
+          Random
+        </button>
       </div>
       <div className="grid">
-        {grid.map((rows, i) =>
-          rows.map((col, j) =>
+        {grid.map((rows:number[], i:number) =>
+          rows.map((col:number, j:number) =>
             <div
               onClick={onGridCellClick(i, j)}
               className={'grid-cell ' + (grid[i][j] ? 'active' : '')}
