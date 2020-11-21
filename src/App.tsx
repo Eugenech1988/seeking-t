@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import cloneDeep from 'lodash/cloneDeep'
 import './style.scss';
 
 
@@ -32,14 +33,14 @@ const App: React.FC = () => {
 
   const startGame = () => {
 
-    const gridClone: number[][] = JSON.parse(JSON.stringify(grid));
+    let gridClone: number[][] = cloneDeep(grid);
 
     for (let i = 0; i < rowsNum; i++) {
       for (let j = 0; j < columnsNum; j++) {
-        let neighbors = 0;
+        let neighbors: number = 0;
         acts.forEach(([x, y]) => {
-          const newI = i + x;
-          const newJ = j + y;
+          const newI: number = i + x;
+          const newJ: number = j + y;
           if (newI >= 0 && newI < rowsNum && newJ >= 0 && newJ < columnsNum) {
             neighbors += grid[newI][newJ];
           }
@@ -51,11 +52,13 @@ const App: React.FC = () => {
         }
       }
     }
-    setGrid(gridClone);
+
+    setGrid(grid => gridClone);
+    console.log(gridClone);
   };
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
-    const deepGrid: number[][] = JSON.parse(JSON.stringify(grid));
+    const deepGrid: number[][] = cloneDeep(grid);
     deepGrid[rowIndex][colIndex] = grid[rowIndex][colIndex] ? 0 : 1;
     setGrid(deepGrid);
   };
@@ -66,6 +69,7 @@ const App: React.FC = () => {
 
   const onStartClick = () => {
     if (!isRunning) {
+      startGame()
       gameRunning.current = setInterval(startGame, 1000)
     } else {
       clearInterval(gameRunning.current)
