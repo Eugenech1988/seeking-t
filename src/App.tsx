@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import './style.scss';
 
@@ -14,7 +14,7 @@ const generateEmptyGrid = () => {
   return rows;
 };
 
-const operations = [
+const acts: number[][] = [
   [0, 1],
   [0, -1],
   [1, -1],
@@ -28,27 +28,22 @@ const operations = [
 const App: React.FC = () => {
   const [grid, setGrid] = useState(generateEmptyGrid());
   const [isRunning, setRunning] = useState(false);
-  // console.log(grid);
 
-  // const runningRef = ()
 
   const startGame = () => {
-    if (!isRunning)
-      return;
 
-    let deepGrid: number[][] = cloneDeep(grid);
+    const deepGrid: number[][] = cloneDeep(grid);
 
     for (let i = 0; i < rowsNum; i++) {
       for (let j = 0; j < columnsNum; j++) {
         let neighbors = 0;
-        operations.forEach(([x, y]) => {
+        acts.forEach(([x, y]) => {
           const newI = i + x;
-          const newK = j + y;
-          if (newI >= 0 && newI < rowsNum && newK >= 0 && newK < columnsNum) {
-            neighbors += grid[newI][newK];
+          const newJ = j + y;
+          if (newI >= 0 && newI < rowsNum && newJ >= 0 && newJ < columnsNum) {
+            neighbors += grid[newI][newJ];
           }
         });
-
         if (neighbors < 2 || neighbors > 3) {
           deepGrid[i][j] = 0;
         } else if (grid[i][j] === 0 && neighbors === 3) {
@@ -56,12 +51,8 @@ const App: React.FC = () => {
         }
       }
     }
-
     setGrid(deepGrid);
-
-    console.log('started');
-
-    setTimeout(startGame, 100)
+    console.log(grid);
   };
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
@@ -74,12 +65,26 @@ const App: React.FC = () => {
     setGrid(generateEmptyGrid());
   };
 
+  const gameRunning = useRef<any>(null);
+
   const onStartClick = () => {
-    setRunning(!isRunning);
-    // if(!isRunning) {
-    startGame();
-    // }
+    if (!isRunning) {
+      gameRunning.current = setInterval(startGame, 1000)
+    } else {
+      clearInterval(gameRunning.current)
+    }
+    setRunning(!isRunning)
   };
+
+  const onRandomClick = () => {
+    const rows: number[][] = [];
+    for (let i = 0; i < rowsNum; i++) {
+      rows.push(
+        Array.from(Array(columnsNum), () => (Math.random() > 0.7 ? 1 : 0))
+      );
+    }
+    setGrid(rows);
+  }
 
   return (
     <>
@@ -98,6 +103,7 @@ const App: React.FC = () => {
         </button>
         <button
           className='btn random-button'
+          onClick={onRandomClick}
         >
           Random
         </button>

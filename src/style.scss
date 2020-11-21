@@ -25,8 +25,13 @@
   border: 1px solid #211717;
   margin-right: 10px;
   cursor: pointer;
+  transition: all .3s ease;
   &:focus {
     outline: none;
+  }
+  &:hover {
+    background-color: #211717;
+    color: white;
   }
   &:last-child {
     margin-right: 0;
