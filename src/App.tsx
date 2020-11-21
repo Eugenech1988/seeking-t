@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import cloneDeep from 'lodash/cloneDeep';
 import './style.scss';
 
 
@@ -29,10 +28,11 @@ const App: React.FC = () => {
   const [grid, setGrid] = useState(generateEmptyGrid());
   const [isRunning, setRunning] = useState(false);
 
+  const gameRunning = useRef<any>(null);
 
   const startGame = () => {
 
-    const deepGrid: number[][] = cloneDeep(grid);
+    const gridClone: number[][] = JSON.parse(JSON.stringify(grid));
 
     for (let i = 0; i < rowsNum; i++) {
       for (let j = 0; j < columnsNum; j++) {
@@ -45,18 +45,17 @@ const App: React.FC = () => {
           }
         });
         if (neighbors < 2 || neighbors > 3) {
-          deepGrid[i][j] = 0;
+          gridClone[i][j] = 0;
         } else if (grid[i][j] === 0 && neighbors === 3) {
-          deepGrid[i][j] = 1;
+          gridClone[i][j] = 1;
         }
       }
     }
-    setGrid(deepGrid);
-    console.log(grid);
+    setGrid(gridClone);
   };
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
-    const deepGrid: number[][] = cloneDeep(grid);
+    const deepGrid: number[][] = JSON.parse(JSON.stringify(grid));
     deepGrid[rowIndex][colIndex] = grid[rowIndex][colIndex] ? 0 : 1;
     setGrid(deepGrid);
   };
@@ -64,8 +63,6 @@ const App: React.FC = () => {
   const onClearClick = () => {
     setGrid(generateEmptyGrid());
   };
-
-  const gameRunning = useRef<any>(null);
 
   const onStartClick = () => {
     if (!isRunning) {

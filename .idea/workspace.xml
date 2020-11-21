@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
+    <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="start/stop fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="28253000" />
+      <workItem from="1605787248816" duration="30068000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1605790376588</created>
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605943061117</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="start/stop fix">
+      <created>1605979722814</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605979722814</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,21 +131,26 @@
     <MESSAGE value="setRunning" />
     <MESSAGE value="game rules" />
     <MESSAGE value="start game condition added" />
-    <option name="LAST_COMMIT_MESSAGE" value="start game condition added" />
+    <MESSAGE value="start/stop fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="start/stop fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1605943060897">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1605979885495">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605943060897" />
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1605979885495" />
+    <state x="168" y="115" key="DiffContextDialog" timestamp="1605979719593">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="168" y="115" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1605979719593" />
     <state x="239" y="88" key="SettingsEditor" timestamp="1605795904659">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605795904659" />
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605943062775">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605979882308">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605943062775" />
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605979882308" />
     <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1605941404244">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
