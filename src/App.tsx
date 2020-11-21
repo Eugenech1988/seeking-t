@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import './style.scss';
 
@@ -14,10 +14,56 @@ const generateEmptyGrid = () => {
   return rows;
 };
 
+const operations = [
+  [0, 1],
+  [0, -1],
+  [1, -1],
+  [-1, 1],
+  [1, 1],
+  [-1, -1],
+  [1, 0],
+  [-1, 0]
+];
+
 const App: React.FC = () => {
   const [grid, setGrid] = useState(generateEmptyGrid());
   const [isRunning, setRunning] = useState(false);
   // console.log(grid);
+
+  // const runningRef = ()
+
+  const startGame = () => {
+    if (!isRunning)
+      return
+
+    const deepGrid: number[][] = cloneDeep(grid)
+
+    const setGameRules = () => {
+      for (let i = 0; i < rowsNum; i++) {
+        for (let j = 0; j < columnsNum; j++) {
+          let neighbors = 0;
+          operations.forEach(([x, y]) => {
+            const newI = i + x;
+            const newK = j + y;
+            if (newI >= 0 && newI < rowsNum && newK >= 0 && newK < columnsNum) {
+              neighbors += grid[newI][newK];
+            }
+          });
+
+          if (neighbors < 2 || neighbors > 3) {
+            deepGrid[i][j] = 0;
+          } else if (grid[i][j] === 0 && neighbors === 3) {
+            deepGrid[i][j] = 1;
+          }
+        }
+      }
+      return deepGrid
+    }
+
+    setGrid(setGameRules())
+
+    setTimeout(startGame, 100)
+  }
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
     const deepGrid: number[][] = cloneDeep(grid);
@@ -31,6 +77,8 @@ const App: React.FC = () => {
 
   const onStartClick = () => {
     setRunning(!isRunning);
+    if(!isRunning)
+      startGame()
   };
 
   return (
@@ -40,7 +88,7 @@ const App: React.FC = () => {
           className='btn start-button'
           onClick={onStartClick}
         >
-          {!isRunning ? 'Start' : 'Running'}
+          {!isRunning ? 'Start' : 'Stop'}
         </button>
         <button
           className='btn clear-button'
