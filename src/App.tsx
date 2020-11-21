@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
+import cloneDeep from 'lodash/cloneDeep'
 import './style.scss'
 
 
@@ -18,8 +19,10 @@ const App: React.FC = () => {
   const [started, setStarted] = useState(false)
   // console.log(grid);
 
-  const onGridCellClick = () => {
-    console.log('clicked');
+  const onGridCellClick = (i: number, j: number) => () => {
+    const deepGrid: number[][] = cloneDeep(grid)
+    deepGrid[i][j] = grid[i][j] ? 0 : 1;
+    setGrid(deepGrid)
   }
 
   return (
@@ -39,8 +42,8 @@ const App: React.FC = () => {
         {grid.map((rows, i) =>
           rows.map((col, j) =>
             <div
-              onClick={onGridCellClick}
-              className='grid-cell'
+              onClick={onGridCellClick(i, j)}
+              className={'grid-cell ' + (grid[i][j] ? 'active' : '')}
               key={`${i}${j}`}
             />
           ))
