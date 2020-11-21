@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
-import cloneDeep from 'lodash/cloneDeep'
-import './style.scss'
+import cloneDeep from 'lodash/cloneDeep';
+import './style.scss';
 
 
 const rowsNum: number = 50;
@@ -16,26 +16,31 @@ const generateEmptyGrid = () => {
 
 const App: React.FC = () => {
   const [grid, setGrid] = useState(generateEmptyGrid());
-  const [started, setStarted] = useState(false)
+  const [isRunning, setRunning] = useState(false);
   // console.log(grid);
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
-    const deepGrid: number[][] = cloneDeep(grid)
+    const deepGrid: number[][] = cloneDeep(grid);
     deepGrid[rowIndex][colIndex] = grid[rowIndex][colIndex] ? 0 : 1;
-    setGrid(deepGrid)
-  }
+    setGrid(deepGrid);
+  };
 
   const onClearClick = () => {
-    setGrid(generateEmptyGrid())
-  }
+    setGrid(generateEmptyGrid());
+  };
+
+  const onStartClick = () => {
+    setRunning(!isRunning);
+  };
 
   return (
     <div className="app">
       <div className="buttons-wrapper">
         <button
           className='btn start-button'
+          onClick={onStartClick}
         >
-          Start
+          {!isRunning ? 'Start' : 'Running'}
         </button>
         <button
           className='btn clear-button'
@@ -50,8 +55,8 @@ const App: React.FC = () => {
         </button>
       </div>
       <div className="grid">
-        {grid.map((rows:number[], i:number) =>
-          rows.map((col:number, j:number) =>
+        {grid.map((rows: number[], i: number) =>
+          rows.map((col: number, j: number) =>
             <div
               onClick={onGridCellClick(i, j)}
               className={'grid-cell ' + (grid[i][j] ? 'active' : '')}
