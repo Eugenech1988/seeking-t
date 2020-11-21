@@ -34,36 +34,35 @@ const App: React.FC = () => {
 
   const startGame = () => {
     if (!isRunning)
-      return
+      return;
 
-    const deepGrid: number[][] = cloneDeep(grid)
+    let deepGrid: number[][] = cloneDeep(grid);
 
-    const setGameRules = () => {
-      for (let i = 0; i < rowsNum; i++) {
-        for (let j = 0; j < columnsNum; j++) {
-          let neighbors = 0;
-          operations.forEach(([x, y]) => {
-            const newI = i + x;
-            const newK = j + y;
-            if (newI >= 0 && newI < rowsNum && newK >= 0 && newK < columnsNum) {
-              neighbors += grid[newI][newK];
-            }
-          });
-
-          if (neighbors < 2 || neighbors > 3) {
-            deepGrid[i][j] = 0;
-          } else if (grid[i][j] === 0 && neighbors === 3) {
-            deepGrid[i][j] = 1;
+    for (let i = 0; i < rowsNum; i++) {
+      for (let j = 0; j < columnsNum; j++) {
+        let neighbors = 0;
+        operations.forEach(([x, y]) => {
+          const newI = i + x;
+          const newK = j + y;
+          if (newI >= 0 && newI < rowsNum && newK >= 0 && newK < columnsNum) {
+            neighbors += grid[newI][newK];
           }
+        });
+
+        if (neighbors < 2 || neighbors > 3) {
+          deepGrid[i][j] = 0;
+        } else if (grid[i][j] === 0 && neighbors === 3) {
+          deepGrid[i][j] = 1;
         }
       }
-      return deepGrid
     }
 
-    setGrid(setGameRules())
+    setGrid(deepGrid);
+
+    console.log('started');
 
     setTimeout(startGame, 100)
-  }
+  };
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
     const deepGrid: number[][] = cloneDeep(grid);
@@ -77,12 +76,13 @@ const App: React.FC = () => {
 
   const onStartClick = () => {
     setRunning(!isRunning);
-    if(!isRunning)
-      startGame()
+    // if(!isRunning) {
+    startGame();
+    // }
   };
 
   return (
-    <div className="app">
+    <>
       <div className="buttons-wrapper">
         <button
           className='btn start-button'
@@ -113,7 +113,7 @@ const App: React.FC = () => {
           ))
         }
       </div>
-    </div>
+    </>
   );
 };
 
