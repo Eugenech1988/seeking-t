@@ -40,8 +40,11 @@ it('grid-cells quantity is the same as expected', () => {
 });
 
 it('could render empty grid', () => {
-  const rowsNum = 10;
+  // setting props for app
+  const rowsNum = 50;
   const colsNum = 20;
+
+  // we don't need to render this time, we need to test our generateEmptyGridFunction - because - this function will create an array for empty grid
   const emptyGrid = generateEmptyGrid(rowsNum, colsNum);
   const zeroArray = emptyGrid.every(item => item.every(childItem => childItem === 0));
 

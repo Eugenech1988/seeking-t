@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { rowsNum, columnsNum, intervalValue, acts } from './constants';
-import { generateEmptyGrid } from './utils';
+import { generateEmptyGrid, generateRandomGrid } from './utils';
 import './style.scss';
 
 // on this realisation of Game Of Life - we'll use only one component and common props
@@ -13,9 +13,9 @@ interface defaultAppProps {
 
 // it's simple app so we don't need to create interface for App component because it's only for demo, to describe props behaviour we need to create separate components
 
-const App: React.FC <defaultAppProps> = (props: defaultAppProps) => {
-  const appRowsNum: number = props.rowsNum ? props.rowsNum : rowsNum
-  const appColsNum: number = props.columnsNum ? props.columnsNum : columnsNum
+const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
+  const appRowsNum: number = props.rowsNum ? props.rowsNum : rowsNum;
+  const appColsNum: number = props.columnsNum ? props.columnsNum : columnsNum;
 
   const [grid, setGrid] = useState(generateEmptyGrid(appRowsNum, appColsNum));
   const [isRunning, setRunning] = useState(false);
@@ -70,13 +70,7 @@ const App: React.FC <defaultAppProps> = (props: defaultAppProps) => {
   };
 
   const onRandomClick = () => {
-    const rows: number[][] = [];
-    for (let i = 0; i < appRowsNum; i++) {
-      rows.push(
-        Array.from(Array(appColsNum), () => (Math.random() > 0.7 ? 1 : 0))
-      );
-    }
-    setGrid(rows);
+    setGrid(generateRandomGrid(appRowsNum, appColsNum));
   };
 
   // we can decompose our app components in future
@@ -102,12 +96,15 @@ const App: React.FC <defaultAppProps> = (props: defaultAppProps) => {
           Random
         </button>
       </div>
+      { /*this can be grid component for example*/ }
       <div className="grid">
         {grid.map((rows: number[], i: number) =>
           rows.map((col: number, j: number) =>
+            // this can be grid-item component for example
             <div
               onClick={onGridCellClick(i, j)}
               className={'grid-cell ' + (grid[i][j] ? 'active' : '')}
+              // for our realisation we don't need to think about unique keys - just only for this case
               key={`${i}${j}`}
             />
           ))
