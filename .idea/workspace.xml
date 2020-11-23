@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="44321000" />
+      <workItem from="1605787248816" duration="44392000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1605790376588</created>
@@ -172,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606146774660</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="generate grid function added">
+      <created>1606147370573</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1606147370573</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,13 +202,14 @@
     <MESSAGE value="names fix" />
     <MESSAGE value="tests suits - completed" />
     <MESSAGE value="generate random grid util" />
-    <option name="LAST_COMMIT_MESSAGE" value="generate random grid util" />
+    <MESSAGE value="generate grid function added" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate grid function added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606146774461">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606147370384">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606146774461" />
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606147370384" />
     <state x="168" y="115" key="DiffContextDialog" timestamp="1605979719593">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -212,10 +218,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605795904659" />
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606146782260">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606147372309">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606146782260" />
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606147372309" />
     <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1606136807163">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

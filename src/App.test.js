@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
-import { generateEmptyGrid } from './utils';
+import { generateGrid } from './utils';
 import App from './App';
 
 
@@ -45,7 +45,7 @@ it('could render empty grid', () => {
   const colsNum = 20;
 
   // we don't need to render this time, we need to test our generateEmptyGridFunction - because - this function will create an array for empty grid
-  const emptyGrid = generateEmptyGrid(rowsNum, colsNum);
+  const emptyGrid = generateGrid(rowsNum, colsNum, true);
   const zeroArray = emptyGrid.every(item => item.every(childItem => childItem === 0));
 
   expect(zeroArray).toBe(true)
