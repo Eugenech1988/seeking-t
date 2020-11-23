@@ -1,10 +1,8 @@
 import React, { useState, useRef } from 'react';
-import cloneDeep from 'lodash/cloneDeep'
+import cloneDeep from 'lodash/cloneDeep';
+import { rowsNum, columnsNum, intervalValue, acts } from './constants';
 import './style.scss';
 
-
-const rowsNum: number = 50;
-const columnsNum: number = 50;
 
 const generateEmptyGrid = () => {
   const rows: number[][] = [];
@@ -14,16 +12,7 @@ const generateEmptyGrid = () => {
   return rows;
 };
 
-const acts: number[][] = [
-  [0, 1],
-  [0, -1],
-  [1, -1],
-  [-1, 1],
-  [1, 1],
-  [-1, -1],
-  [1, 0],
-  [-1, 0]
-];
+// it's simple app so we don't need to create interface for App component because it's only for demo, to describe props behaviour we need to create separate components
 
 const App: React.FC = () => {
   const [grid, setGrid] = useState(generateEmptyGrid());
@@ -69,12 +58,12 @@ const App: React.FC = () => {
 
   const onStartClick = () => {
     if (!isRunning) {
-      startGame()
-      gameRunning.current = setInterval(startGame, 1000)
+      startGame();
+      gameRunning.current = setInterval(startGame, intervalValue);
     } else {
-      clearInterval(gameRunning.current)
+      clearInterval(gameRunning.current);
     }
-    setRunning(!isRunning)
+    setRunning(!isRunning);
   };
 
   const onRandomClick = () => {
@@ -85,7 +74,7 @@ const App: React.FC = () => {
       );
     }
     setGrid(rows);
-  }
+  };
 
   return (
     <>
