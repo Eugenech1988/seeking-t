@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="some tests added">
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
+    <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="38595000" />
+      <workItem from="1605787248816" duration="40132000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1605790376588</created>
@@ -132,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605985419653</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="constants folder created">
+      <created>1606127338611</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606127338611</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,13 +157,14 @@
     <MESSAGE value="start/stop fix" />
     <MESSAGE value="native cloneDeep" />
     <MESSAGE value="cloneDeep fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="cloneDeep fix" />
+    <MESSAGE value="constants folder created" />
+    <option name="LAST_COMMIT_MESSAGE" value="constants folder created" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606126324380">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606127338426">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606126324380" />
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606127338426" />
     <state x="168" y="115" key="DiffContextDialog" timestamp="1605979719593">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -166,13 +173,13 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605795904659" />
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605985422010">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606127339814">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1605985422010" />
-    <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1606124283337">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606127339814" />
+    <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1606136807163">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1606124283337" />
+    <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1606136807163" />
   </component>
 </project>

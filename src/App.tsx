@@ -1,36 +1,39 @@
 import React, { useState, useRef } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { rowsNum, columnsNum, intervalValue, acts } from './constants';
+import { generateEmptyGrid } from './utils';
 import './style.scss';
 
-
-const generateEmptyGrid = () => {
-  const rows: number[][] = [];
-  for (let i = 0; i < rowsNum; i++) {
-    rows.push(Array.from(Array(columnsNum), () => 0));
-  }
-  return rows;
-};
+// on this realisation of Game Of Life - we'll use only one component and common props
+interface defaultAppProps {
+  rowsNum?: number,
+  columnsNum?: number
+  // intervalValue: number *** this case only if you'll want to pass interval time prop ***
+}
 
 // it's simple app so we don't need to create interface for App component because it's only for demo, to describe props behaviour we need to create separate components
 
-const App: React.FC = () => {
-  const [grid, setGrid] = useState(generateEmptyGrid());
+const App: React.FC <defaultAppProps> = (props: defaultAppProps) => {
+  const appRowsNum: number = props.rowsNum ? props.rowsNum : rowsNum
+  const appColsNum: number = props.columnsNum ? props.columnsNum : columnsNum
+
+  const [grid, setGrid] = useState(generateEmptyGrid(appRowsNum, appColsNum));
   const [isRunning, setRunning] = useState(false);
 
+  // when we'll want to reach value of running - we need to reach link to this element, so we'll put it into ref
   const gameRunning = useRef<any>(null);
 
   const startGame = () => {
 
     let gridClone: number[][] = cloneDeep(grid);
 
-    for (let i = 0; i < rowsNum; i++) {
-      for (let j = 0; j < columnsNum; j++) {
+    for (let i = 0; i < appRowsNum; i++) {
+      for (let j = 0; j < appColsNum; j++) {
         let neighbors: number = 0;
         acts.forEach(([x, y]) => {
           const newI: number = i + x;
           const newJ: number = j + y;
-          if (newI >= 0 && newI < rowsNum && newJ >= 0 && newJ < columnsNum) {
+          if (newI >= 0 && newI < appRowsNum && newJ >= 0 && newJ < appColsNum) {
             neighbors += grid[newI][newJ];
           }
         });
@@ -53,7 +56,7 @@ const App: React.FC = () => {
   };
 
   const onClearClick = () => {
-    setGrid(generateEmptyGrid());
+    setGrid(generateEmptyGrid(appRowsNum, appColsNum));
   };
 
   const onStartClick = () => {
@@ -68,9 +71,9 @@ const App: React.FC = () => {
 
   const onRandomClick = () => {
     const rows: number[][] = [];
-    for (let i = 0; i < rowsNum; i++) {
+    for (let i = 0; i < appRowsNum; i++) {
       rows.push(
-        Array.from(Array(columnsNum), () => (Math.random() > 0.7 ? 1 : 0))
+        Array.from(Array(appColsNum), () => (Math.random() > 0.7 ? 1 : 0))
       );
     }
     setGrid(rows);
