@@ -79,6 +79,7 @@ const App: React.FC <defaultAppProps> = (props: defaultAppProps) => {
     setGrid(rows);
   };
 
+  // we can decompose our app components in future
   return (
     <>
       <div className="buttons-wrapper">
