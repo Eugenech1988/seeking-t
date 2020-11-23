@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import { generateEmptyGrid } from './utils';
 import App from './App';
 
 
@@ -27,7 +28,7 @@ it('grid has child with class name grid-cell', () => {
 it('grid-cells quantity is the same as expected', () => {
   // setting props for app
   const rowsNum = 10;
-  const colsNum = 20
+  const colsNum = 20;
 
   render(
     <App
@@ -35,9 +36,14 @@ it('grid-cells quantity is the same as expected', () => {
       columnsNum={colsNum}
     />,
     container);
-  expect(container.querySelectorAll('.grid-cell').length).toBe(rowsNum*colsNum)
+  expect(container.querySelectorAll('.grid-cell').length).toBe(rowsNum * colsNum);
 });
 
-// it('could render empty grid', () => {
-//
-// })
+it('could render empty grid', () => {
+  const rowsNum = 10;
+  const colsNum = 20;
+  const emptyGrid = generateEmptyGrid(rowsNum, colsNum);
+  const zeroArray = emptyGrid.every(item => item.every(childItem => childItem === 0));
+
+  expect(zeroArray).toBe(true)
+});

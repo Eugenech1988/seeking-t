@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="41341000" />
+      <workItem from="1605787248816" duration="43040000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1605790376588</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606139512224</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="names fix">
+      <created>1606139622564</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1606139622564</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,13 +179,14 @@
     <MESSAGE value="constants folder created" />
     <MESSAGE value="constants, utils and interface added" />
     <MESSAGE value="testing and props added" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing and props added" />
+    <MESSAGE value="names fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="names fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606139512044">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606139622378">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606139512044" />
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606139622378" />
     <state x="168" y="115" key="DiffContextDialog" timestamp="1605979719593">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -187,10 +195,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1605795904659" />
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606139513527">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606139624152">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606139513527" />
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606139624152" />
     <state x="421" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1606136807163">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
