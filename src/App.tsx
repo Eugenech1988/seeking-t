@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { rowsNum, columnsNum, intervalValue, acts } from './constants';
-import { generateEmptyGrid, generateRandomGrid } from './utils';
+import { generateGrid } from './utils';
 import './style.scss';
 
 // on this realisation of Game Of Life - we'll use only one component and common props
@@ -11,13 +11,11 @@ interface defaultAppProps {
   // intervalValue: number *** this case only if you'll want to pass interval time prop ***
 }
 
-// it's simple app so we don't need to create interface for App component because it's only for demo, to describe props behaviour we need to create separate components
-
 const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
   const appRowsNum: number = props.rowsNum ? props.rowsNum : rowsNum;
   const appColsNum: number = props.columnsNum ? props.columnsNum : columnsNum;
 
-  const [grid, setGrid] = useState(generateEmptyGrid(appRowsNum, appColsNum));
+  const [grid, setGrid] = useState(generateGrid(appRowsNum, appColsNum, true));
   const [isRunning, setRunning] = useState(false);
 
   // when we'll want to reach value of running - we need to reach link to this element, so we'll put it into ref
@@ -46,7 +44,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
     }
 
     setGrid(grid => gridClone);
-    console.log(gridClone);
+    console.log(grid);
   };
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
@@ -56,7 +54,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
   };
 
   const onClearClick = () => {
-    setGrid(generateEmptyGrid(appRowsNum, appColsNum));
+    setGrid(generateGrid(appRowsNum, appColsNum, true));
   };
 
   const onStartClick = () => {
@@ -70,7 +68,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
   };
 
   const onRandomClick = () => {
-    setGrid(generateRandomGrid(appRowsNum, appColsNum));
+    setGrid(generateGrid(appRowsNum, appColsNum, false));
   };
 
   // we can decompose our app components in future

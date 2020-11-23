@@ -1,17 +1,11 @@
-export const generateEmptyGrid = (rowsNum: number, columnsNum: number) => {
+export const generateGrid = (rowsNum: number, columnsNum: number, isEmpty: boolean) => {
   const rows: number[][] = [];
   for (let i = 0; i < rowsNum; i++) {
-    rows.push(Array.from(Array(columnsNum), () => 0));
+    if (isEmpty) {
+      rows.push(Array.from(Array(columnsNum), () => 0));
+    } else {
+      rows.push(Array.from(Array(columnsNum), () => (Math.random() > 0.7 ? 1 : 0)));
+    }
   }
   return rows;
 };
-
-export const generateRandomGrid = (rowsNum: number, columnsNum: number) => {
-  const rows: number[][] = [];
-  for (let i = 0; i < rowsNum; i++) {
-    rows.push(
-      Array.from(Array(columnsNum), () => (Math.random() > 0.7 ? 1 : 0))
-    );
-  }
-  return rows;
-}
