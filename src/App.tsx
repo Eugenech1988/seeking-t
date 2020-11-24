@@ -102,7 +102,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
               onClick={onGridCellClick(i, j)}
               className={'grid-cell ' + (grid[i][j] ? 'active' : '')}
               // for our realisation we don't need to think about unique keys - just only for this case
-              key={`${i}${j}`}
+              key={`(${i})(${j})`}
             />
           ))
         }
