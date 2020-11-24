@@ -43,7 +43,6 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
     }
 
     setGrid(gridClone);
-    console.log(grid);
   }, [grid, setGrid, appRowsNum, appColsNum]);
 
   useInterval(() => {
