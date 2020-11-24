@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { rowsNum, columnsNum, intervalValue, acts } from './constants';
 import { generateGrid } from './utils';
 import './style.scss';
 
-// on this realisation of Game Of Life - we'll use only one component and common props
+// on this realisation of Game Of Life - we'll use only one component and constants
 interface defaultAppProps {
   rowsNum?: number,
   columnsNum?: number
@@ -21,7 +21,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
   // when we'll want to reach value of running - we need to reach link to this element, so we'll put it into ref
   const gameRunning = useRef<any>(null);
 
-  const startGame = () => {
+  const startGame = useCallback(() => {
 
     let gridClone: number[][] = cloneDeep(grid);
 
@@ -43,9 +43,9 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
       }
     }
 
-    setGrid(grid => gridClone);
+    setGrid(gridClone);
     console.log(grid);
-  };
+  }, [grid, appRowsNum, appColsNum]);
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
     const deepGrid: number[][] = cloneDeep(grid);
@@ -59,7 +59,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
 
   const onStartClick = () => {
     if (!isRunning) {
-      startGame();
+      // startGame();
       gameRunning.current = setInterval(startGame, intervalValue);
     } else {
       clearInterval(gameRunning.current);
@@ -71,7 +71,7 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
     setGrid(generateGrid(appRowsNum, appColsNum, false));
   };
 
-  // we can decompose our app components in future
+  // we can decompose our app component in future
   return (
     <>
       <div className="buttons-wrapper">
