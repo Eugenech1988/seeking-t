@@ -1,8 +1,28 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { rowsNum, columnsNum, intervalValue, acts } from './constants';
 import { generateGrid } from './utils';
 import './style.scss';
+
+const useInterval = (callback: any, delay: number) => {
+  const savedCallbackRef = useRef<any>(null);
+
+  useEffect(() => {
+    savedCallbackRef.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    const handler = (...args: any) => {
+      if (savedCallbackRef.current) {
+        savedCallbackRef.current(...args);
+      }
+    };
+    if (delay !== null) {
+      const intervalId = setInterval(handler, delay);
+      return () => clearInterval(intervalId);
+    }
+  }, [delay]);
+};
 
 // on this realisation of Game Of Life - we'll use only one component and constants
 interface defaultAppProps {
@@ -19,9 +39,8 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
   const [isRunning, setRunning] = useState(false);
 
   // when we'll want to reach value of running - we need to reach link to this element, so we'll put it into ref
-  const gameRunning = useRef<any>(null);
 
-  const startGame = useCallback(() => {
+  const gameTick = useCallback(() => {
 
     let gridClone: number[][] = cloneDeep(grid);
 
@@ -45,7 +64,13 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
 
     setGrid(gridClone);
     console.log(grid);
-  }, [grid, appRowsNum, appColsNum]);
+  }, [grid, setGrid, appRowsNum, appColsNum]);
+
+  useInterval(() => {
+    if (isRunning) {
+      gameTick();
+    }
+  }, intervalValue);
 
   const onGridCellClick = (rowIndex: number, colIndex: number) => () => {
     const deepGrid: number[][] = cloneDeep(grid);
@@ -57,15 +82,9 @@ const App: React.FC<defaultAppProps> = (props: defaultAppProps) => {
     setGrid(generateGrid(appRowsNum, appColsNum, true));
   };
 
-  const onStartClick = () => {
-    if (!isRunning) {
-      // startGame();
-      gameRunning.current = setInterval(startGame, intervalValue);
-    } else {
-      clearInterval(gameRunning.current);
-    }
+  const onStartClick = useCallback(() => {
     setRunning(!isRunning);
-  };
+  }, [isRunning, setRunning]);
 
   const onRandomClick = () => {
     setGrid(generateGrid(appRowsNum, appColsNum, false));
