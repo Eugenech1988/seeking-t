@@ -1,28 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { rowsNum, columnsNum, intervalValue, acts } from './constants';
-import { generateGrid } from './utils';
+import { generateGrid, useInterval } from './utils';
 import './style.scss';
-
-const useInterval = (callback: any, delay: number) => {
-  const savedCallbackRef = useRef<any>(null);
-
-  useEffect(() => {
-    savedCallbackRef.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
-    const handler = (...args: any) => {
-      if (savedCallbackRef.current) {
-        savedCallbackRef.current(...args);
-      }
-    };
-    if (delay !== null) {
-      const intervalId = setInterval(handler, delay);
-      return () => clearInterval(intervalId);
-    }
-  }, [delay]);
-};
 
 // on this realisation of Game Of Life - we'll use only one component and constants
 interface defaultAppProps {

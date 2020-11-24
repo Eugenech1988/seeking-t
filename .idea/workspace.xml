@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="use">
+    <list default="true" id="e4a76075-339b-45ed-a900-0145fc856964" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605786397182</updated>
       <workItem from="1605786398226" duration="840000" />
-      <workItem from="1605787248816" duration="50479000" />
+      <workItem from="1605787248816" duration="50675000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1605790376588</created>
@@ -192,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606206968263</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="finished">
+      <created>1606213141634</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606213141634</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,13 +228,14 @@
     <MESSAGE value="generate grid function added" />
     <MESSAGE value="test case fix" />
     <MESSAGE value="generate grid fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="generate grid fix" />
+    <MESSAGE value="finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606209351981">
+    <state x="337" y="23" key="CommitChangelistDialog2" timestamp="1606213141429">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606209351981" />
+    <state x="337" y="23" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1606213141429" />
     <state x="168" y="115" key="DiffContextDialog" timestamp="1605979719593">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -239,10 +248,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="239" y="88" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1606212707804" />
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606206969833">
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606213143318">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606206969833" />
+    <state x="340" y="190" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1606213143318" />
     <state x="604" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606193182136">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
